@@ -13,7 +13,7 @@ class Migration(SchemaMigration):
         # Increase length of email field to match
         db.alter_column('auth_user', 'email', models.CharField(max_length=MAX_EMAIL_LENGTH()))
         # Add an index to make email field unique
-        db.create_index('auth_user', ['email'], unique=REQUIRE_UNIQUE_EMAIL())
+        #db.create_index('auth_user', ['email'], unique=REQUIRE_UNIQUE_EMAIL())
 
     def backwards(self, orm):
 
